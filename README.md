@@ -1,6 +1,7 @@
 # knex-tenanty
 
 [![Build Status](https://travis-ci.org/brunolm/knex-tenanty.svg?branch=master)](https://travis-ci.org/brunolm/knex-tenanty)
+[![npm version](http://img.shields.io/npm/v/knex-tenanty.svg?style=flat)](https://www.npmjs.com/package/knex-tenanty)
 
 Knex middleware to handle multiple tenants.
 
