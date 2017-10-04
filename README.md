@@ -1,5 +1,7 @@
 # knex-tenanty
 
+[![Build Status](https://travis-ci.org/brunolm/knex-tenanty.svg?branch=master)](https://travis-ci.org/brunolm/knex-tenanty)
+
 Knex middleware to handle multiple tenants.
 
 You can run your application for several clients and the database will be created in different schemas.
