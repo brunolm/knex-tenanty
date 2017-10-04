@@ -21,6 +21,13 @@
     "url": "http://www.codingwise.com/"
   },
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brunolm/knex-tenanty"
+  },
+  "bugs": {
+    "url": "https://github.com/brunolm/knex-tenanty/issues"
+  },
   "engines": {
     "node": ">8.0.0",
     "npm": ">5.0.0"
