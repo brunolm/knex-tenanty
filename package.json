@@ -1,6 +1,6 @@
 {
   "name": "knex-tenanty",
-  "version": "0.0.1-beta",
+  "version": "0.0.1-beta.1",
   "description": "Multi tenant knex middleware. Allows for multiple clients using the same application saving data in different schemas.",
   "main": "dist/index.js",
   "scripts": {
