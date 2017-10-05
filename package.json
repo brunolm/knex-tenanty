@@ -5,11 +5,29 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "test": "npm run lint",
+    "test": "npm run lint && npm run unit-test",
+    "unit-test": "ts-node jasmine.js",
     "lint": "tslint src/*.ts",
-    "prepublish": "npm run test && npm run build"
+    "cover": "nyc node_modules/jasmine/bin/jasmine.js --config=jasmine.json",
+    "prepare": "npm run test && npm run build"
   },
   "types": "dist/index.d.ts",
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "exclude": [
+      "**/*.spec.ts",
+      "**/*.d.ts",
+      "**/dist",
+      ".*"
+    ],
+    "reporter": [
+      "html"
+    ],
+    "all": true
+  },
   "keywords": [
     "knex",
     "multi-tenant",
@@ -37,9 +55,13 @@
     "lru-cache": "^4.1.1"
   },
   "devDependencies": {
+    "@types/jasmine": "^2.6.0",
     "@types/knex": "0.0.61",
     "@types/lru-cache": "^4.1.0",
     "@types/node": "^8.0.32",
+    "jasmine": "^2.8.0",
+    "jasmine-console-reporter": "^2.0.1",
+    "nyc": "^11.2.1",
     "ts-node": "^3.3.0",
     "tslint": "^5.7.0",
     "typescript": "^2.5.3"
